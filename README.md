@@ -38,8 +38,8 @@ Value rage: << 609328004 |Allergic disposition (finding)|
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
-        <td>not needed</td>
-        <td>not needed</td>
+        <td>---</td>
+        <td>Condition.code</td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Causative agent</font></p></td>
@@ -73,12 +73,9 @@ Value rage: << 609328004 |Allergic disposition (finding)|
         <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
     </tr>
     <tr>
-        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
-        <td>Condition.onset[x]:onsetAge.extension:lebensphase-von</td>
-        <td rowspan="2">Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
-    </tr>
-    <tr>
-        <td> <p style="margin-bottom:-5px">AllergyIntolerance.onsetAge.extension:lebensphase-von</p> </td>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
+        <td>AllergyIntolerance.onsetAge.extension:lebensphase-von</td>
+        <td>Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>
