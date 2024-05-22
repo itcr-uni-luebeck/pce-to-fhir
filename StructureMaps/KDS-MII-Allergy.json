@@ -1,0 +1,213 @@
+{
+  "resourceType": "StructureMap",
+  "id": "KDS-MII-Allergy",
+  "url": "http://hl7.org/fhir/StructureMap/KDS-MII-Allergy",
+  "name": "KDS_MII_Allergy",
+  "status": "active",
+  "group": [ {
+    "name": "DecompositionAllergy",
+    "typeMode": "none",
+    "input": [ {
+      "name": "source",
+      "mode": "source"
+    }, {
+      "name": "target",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "SuperConcept",
+      "source": [ {
+        "context": "source",
+        "element": "superconcept"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.code",
+        "parameter": [ {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "CausativeAgent",
+      "source": [ {
+        "context": "source",
+        "element": "246075003"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "FindingSite",
+      "source": [ {
+        "context": "source",
+        "element": "363698007"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      }, {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Observation.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "AssociatedMorphology",
+      "source": [ {
+        "context": "source",
+        "element": "116676008"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Observation.value",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      }, {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.evidence.code",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "PathologicalProcess",
+      "source": [ {
+        "context": "source",
+        "element": "370135005"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.evidence.code",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "HasRealization",
+      "source": [ {
+        "context": "source",
+        "element": "719722006"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.evidence.code",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "Occurrence",
+      "source": [ {
+        "context": "source",
+        "element": "246454002"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "ClinicalCourse",
+      "source": [ {
+        "context": "source",
+        "element": "263502005"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "HL7 International Extension: Condition.condition-diseaseCourse",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": false
+        } ]
+      } ]
+    }, {
+      "name": "DueTo",
+      "source": [ {
+        "context": "source",
+        "element": "42752001"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "HL7 International Extension: Condition.condition-dueTo",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": false
+        } ]
+      } ]
+    }, {
+      "name": "References",
+      "source": [ {
+        "context": "source",
+        "element": "references"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition.evidence.detail->Observation",
+        "parameter": [ {
+          "valueBoolean": false
+        } ]
+      } ]
+    }, {
+      "name": "NamesProfiles",
+      "source": [ {
+        "context": "source",
+        "element": "namesprofiles"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Condition->Profile - Condition - Diagnose",
+        "parameter": [ {
+          "valueBoolean": false
+        } ]
+      }, {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Observation->Profile - Observation - Laboruntersuchung",
+        "parameter": [ {
+          "valueBoolean": false
+        } ]
+      } ]
+    } ]
+  } ]
+}
