@@ -17,10 +17,11 @@ A PCE, which is first checked for syntactic and semantic correctness, serves as 
 * profiles of the German National Association of Statutory Health Insurance Physicians (NASHIP, version 1.4.0, based on FHIR R4) [1] 
 * profiles of the core data set of the German Medical Informatics Initiative (MII, version 1.0, based on FHIR R4) [2].  
 
-
 Therefore, FHIR StructureMaps defining these associations on a general level need to be created beforehand.
 
 The FHIR StructureMaps and the mapping of the individual elements are provided in tabular form in this repository.
+
+<img src="Images\overview-methods.png" style="width:80%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px"/>
 
 #### Publication
 Ohlsen T, Drenkhahn C, Ingenerf J. Decomposition of post-coordinated SNOMED CT expressions for storage as HL7 FHIR resources (PCEtoFHIR) (Preprint). JMIR Medical Informatics. Published online February 28, 2024. doi:10.2196/preprints.57853
