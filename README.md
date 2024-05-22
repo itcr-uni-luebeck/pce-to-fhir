@@ -19,7 +19,7 @@ A PCE, which is first checked for syntactic and semantic correctness, serves as 
 
 Therefore, FHIR StructureMaps defining these associations on a general level need to be created beforehand.
 
-The [FHIR StructureMaps](https://github.com/itcr-uni-luebeck/pce-to-fhir/tree/main/StructureMaps) and the mapping of the individual elements in tabular form are provided in this repository.
+The [FHIR StructureMaps]() and the mapping of the individual elements in tabular form are provided in this repository.
 
 <img src="Images\overview-methods.png" style="width:80%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px"/>
 
@@ -28,6 +28,70 @@ Ohlsen T, Drenkhahn C, Ingenerf J. Decomposition of post-coordinated SNOMED CT e
 
 
 ## 2. Allergies
+Value rage: << 609328004 |Allergic disposition (finding)|
+
+<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
+    <tr>
+        <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath MII</p> </th>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
+        <td>not needed</td>
+        <td>not needed</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Causative agent</font></p></td>
+        <td>AllergyIntolerance.code</td>
+        <td>---</td>
+    </tr>
+    <tr>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Finding site</font></p> </td>
+        <td rowspan="2"> <p style="margin-bottom:-5px">Extension von HL7 International: <br>AllergyIntolerance.openEHR-location</p> </td>
+        <td> <p style="margin-bottom:-5px">Observation.bodySite</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">Condition.bodySite</p> </td>
+    </tr>
+    <tr>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Associated morphology</font></p> </td>
+        <td rowspan="2"> <p style="margin-bottom:-5px">AllergyIntolerance.reaction.manifestation.coding:snomed</p> </td>
+        <td> <p style="margin-bottom:-5px">Observation.code</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Pathological process</font></p> </td>
+        <td> <p style="margin-bottom:-5px">AllergyIntolerance.reaction.manifestation.coding:snomed</p> </td>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Has realization</font></p> </td>
+        <td> <p style="margin-bottom:-5px">AllergyIntolerance.reaction.manifestation.coding:snomed</p> </td>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+    </tr>
+    <tr>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
+        <td>Condition.onset[x]:onsetAge.extension:lebensphase-von</td>
+        <td rowspan="2">Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">AllergyIntolerance.onsetAge.extension:lebensphase-von</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>
+        <td>---</td>
+        <td>Extension von HL7 International: <br>Condition.condition-diseaseCourse</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Due to</font></p></td>
+        <td>---</td>
+        <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
+    </tr>
+</table>
+
 
 
 ## 3. Disease due to allergies
@@ -77,15 +141,18 @@ Value rage: <<781474001 |Allergic disorder (disorder)|
     <tr>
         <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Has realization</font></p> </td>
         <td> <p style="margin-bottom:-5px">AllergyIntolerance.reaction.manifestation.coding:snomed</p> </td>
-        <td rowspan="2"> <p style="margin-bottom:-5px">Observation.bodySite</p> </td>
+        <td rowspan="2"> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
     </tr>
     <tr>
-        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
         <td>Condition.onset[x]:onsetAge.extension:lebensphase-von</td>
-        <td>Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
+        <td rowspan="2">Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">AllergyIntolerance.onsetAge.extension:lebensphase-von</p> </td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>
@@ -164,15 +231,18 @@ Value rage: <<419076005 |Allergic reaction (disorder)|
     <tr>
         <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Has realization</font></p> </td>
         <td> <p style="margin-bottom:-5px">AllergyIntolerance.reaction.manifestation.coding:snomed</p> </td>
-        <td rowspan="2"> <p style="margin-bottom:-5px">Observation.bodySite</p> </td>
+        <td rowspan="2"> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
     </tr>
     <tr>
-        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Occurrence</font></p></td>
         <td>Condition.onset[x]:onsetAge.extension:lebensphase-von</td>
-        <td>Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
+        <td rowspan="2">Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">AllergyIntolerance.onsetAge.extension:lebensphase-von</p> </td>
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>

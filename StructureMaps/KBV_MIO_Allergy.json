@@ -53,7 +53,7 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "Condition.bodySite",
+        "element": "Extension von HL7 International: AllergyIntolerance.openEHR-location",
         "parameter": [ {
           "valueString": "delta"
         }, {
@@ -67,15 +67,6 @@
         "element": "116676008"
       } ],
       "target": [ {
-        "context": "target",
-        "contextType": "variable",
-        "element": "Condition.evidence.code",
-        "parameter": [ {
-          "valueString": "delta"
-        }, {
-          "valueBoolean": true
-        } ]
-      }, {
         "context": "target",
         "contextType": "variable",
         "element": "AllergyIntolerance.reaction.manifestation.coding",
@@ -94,15 +85,6 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "Condition.evidence.code",
-        "parameter": [ {
-          "valueString": "delta"
-        }, {
-          "valueBoolean": true
-        } ]
-      }, {
-        "context": "target",
-        "contextType": "variable",
         "element": "AllergyIntolerance.reaction.manifestation.coding",
         "parameter": [ {
           "valueString": "delta"
@@ -117,15 +99,6 @@
         "element": "719722006"
       } ],
       "target": [ {
-        "context": "target",
-        "contextType": "variable",
-        "element": "Condition.evidence.code",
-        "parameter": [ {
-          "valueString": "delta"
-        }, {
-          "valueBoolean": true
-        } ]
-      }, {
         "context": "target",
         "contextType": "variable",
         "element": "AllergyIntolerance.reaction.manifestation.coding",
@@ -144,16 +117,7 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "Condition.onset[x]:onsetAge.code",
-        "parameter": [ {
-          "valueString": "delta"
-        }, {
-          "valueBoolean": true
-        } ]
-      }, {
-        "context": "target",
-        "contextType": "variable",
-        "element": "Condition.onsetAge.extension:lebensphase-von",
+        "element": "AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von",
         "parameter": [ {
           "valueString": "delta"
         }, {
@@ -169,7 +133,6 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "HL7 International Extension: Condition.condition-diseaseCourse",
         "parameter": [ {
           "valueString": "delta"
         }, {
@@ -185,25 +148,10 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "HL7 International Extension: Condition.condition-dueTo",
         "parameter": [ {
           "valueString": "delta"
         }, {
           "valueBoolean": false
-        } ]
-      } ]
-    }, {
-      "name": "References",
-      "source": [ {
-        "context": "source",
-        "element": "references"
-      } ],
-      "target": [ {
-        "context": "target",
-        "contextType": "variable",
-        "element": "Condition.evidence.detail->AllergyIntolerance",
-        "parameter": [ {
-          "valueBoolean": true
         } ]
       } ]
     }, {
@@ -215,7 +163,7 @@
       "target": [ {
         "context": "target",
         "contextType": "variable",
-        "element": "Condition->KBV_PR_Base_Condition_Diagnosis",
+        "element": "AllergyIntolerance->KBV_PR_Base_AllergyIntolerance",
         "parameter": [ {
           "valueBoolean": true
         } ]
