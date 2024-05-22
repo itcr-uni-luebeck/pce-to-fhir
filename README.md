@@ -294,8 +294,8 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
     </tr>
     <tr>
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
-        <td>Condition.extension:dueTo</td>
-        <td>---</td>
+        <td>Condition.code</td>
+        <td>Condition.code<td>
     </tr>   
     <tr>
         <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Finding site</font></p> </td>
@@ -319,6 +319,11 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
         <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>
         <td>Extension von HL7 International: <br>Condition.condition-diseaseCourse</td>
         <td>Extension von HL7 International: <br>Condition.condition-diseaseCourse</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Due to</font></p></td>
+        <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
+        <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
     </tr>
 </table>
 
