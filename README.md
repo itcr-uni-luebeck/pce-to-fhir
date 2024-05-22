@@ -20,7 +20,7 @@ A PCE, which is first checked for syntactic and semantic correctness, serves as 
 
 Therefore, FHIR StructureMaps defining these associations on a general level need to be created beforehand.
 
-<img src="images\overview-methods.png" style="width:80%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px"/>
+<img src="Images\overview-methods.png" style="width:80%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px"/>
 
 The FHIR StructureMaps and the mapping of the individual elements are provided in tabular form in this repository.
 
