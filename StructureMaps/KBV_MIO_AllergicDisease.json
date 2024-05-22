@@ -1,0 +1,332 @@
+{
+  "resourceType": "StructureMap",
+  "id": "KBV-MIO-AllergicDisease",
+  "url": "http://hl7.org/fhir/StructureMap/KBV-MIO-AllergicDisease",
+  "name": "KBV_MIO_AllergicDisease",
+  "status": "active",
+  "group": [
+    {
+      "name": "DecompositionAllergicDisease",
+      "typeMode": "none",
+      "input": [
+        {
+          "name": "source",
+          "mode": "source"
+        },
+        {
+          "name": "target",
+          "mode": "target"
+        }
+      ],
+      "rule": [
+        {
+          "name": "SuperConcept",
+          "source": [
+            {
+              "context": "source",
+              "element": "superconcept"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.code",
+              "parameter": [
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CausativeAgent",
+          "source": [
+            {
+              "context": "source",
+              "element": "246075003"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "AllergyIntolerance.code",
+              "parameter": [
+                {
+                  "valueString": "always"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FindingSite",
+          "source": [
+            {
+              "context": "source",
+              "element": "363698007"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.bodySite",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AssociatedMorphology",
+          "source": [
+            {
+              "context": "source",
+              "element": "116676008"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.evidence.code",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            },
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "AllergyIntolerance.reaction.manifestation.coding",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PathologicalProcess",
+          "source": [
+            {
+              "context": "source",
+              "element": "370135005"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.evidence.code",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            },
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "AllergyIntolerance.reaction.manifestation.coding",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HasRealization",
+          "source": [
+            {
+              "context": "source",
+              "element": "719722006"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.evidence.code",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            },
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "AllergyIntolerance.reaction.manifestation.coding",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Occurrence",
+          "source": [
+            {
+              "context": "source",
+              "element": "246454002"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.onset[x]:onsetAge.code",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            },
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.onsetAge.extension:lebensphase-von",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ClinicalCourse",
+          "source": [
+            {
+              "context": "source",
+              "element": "263502005"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "HL7 International Extension: Condition.condition-diseaseCourse",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DueTo",
+          "source": [
+            {
+              "context": "source",
+              "element": "42752001"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "HL7 International Extension: Condition.condition-dueTo",
+              "parameter": [
+                {
+                  "valueString": "delta"
+                },
+                {
+                  "valueBoolean": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "References",
+          "source": [
+            {
+              "context": "source",
+              "element": "references"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition.evidence.detail->AllergyIntolerance",
+              "parameter": [
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NamesProfiles",
+          "source": [
+            {
+              "context": "source",
+              "element": "namesprofiles"
+            }
+          ],
+          "target": [
+            {
+              "context": "target",
+              "contextType": "variable",
+              "element": "Condition->KBV_PR_Base_Condition_Diagnosis",
+              "parameter": [
+                {
+                  "valueBoolean": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "resourceType": "StructureMap",
+  "id": "KDS-MII-Procedure",
+  "meta": {
+    "versionId": "7",
+    "lastUpdated": "2024-05-22T11:19:39.225+00:00",
+    "source": "#mHRukJGhwk7Dv8wB"
+  },
+  "url": "http://hl7.org/fhir/StructureMap/KDS-MII-Procedure",
+  "name": "KDS_MII_Procedure",
+  "status": "active",
+  "group": [ {
+    "name": "De-Composition-Procedure",
+    "typeMode": "none",
+    "input": [ {
+      "name": "source",
+      "type": "SNOMED CT elements",
+      "mode": "source"
+    }, {
+      "name": "target",
+      "type": "FHIR path",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "SuperConcept",
+      "source": [ {
+        "context": "source",
+        "element": "superconcept"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.code",
+        "parameter": [ {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "Method",
+      "source": [ {
+        "context": "source",
+        "element": "260686004"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "HL7 International Extension: Procedure.procedure-method",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": false
+        } ]
+      } ]
+    }, {
+      "name": "ProcedureSiteDirect",
+      "source": [ {
+        "context": "source",
+        "element": "405813007"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "ProcedureSiteIndirect",
+      "source": [ {
+        "context": "source",
+        "element": "405814001"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "ProcedureSite",
+      "source": [ {
+        "context": "source",
+        "element": "363704007"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "DirectSubstance",
+      "source": [ {
+        "context": "source",
+        "element": "363701004"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "DirectMorphology",
+      "source": [ {
+        "context": "source",
+        "element": "363700003"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.bodySite",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "UsingSubstance",
+      "source": [ {
+        "context": "source",
+        "element": "424361007"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "DirectDevice",
+      "source": [ {
+        "context": "source",
+        "element": "363699004"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "UsingDevice",
+      "source": [ {
+        "context": "source",
+        "element": "424226004"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "UsingAccessDevice",
+      "source": [ {
+        "context": "source",
+        "element": "425391005"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "HasIntent",
+      "source": [ {
+        "context": "source",
+        "element": "363703001"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.category ",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "Access",
+      "source": [ {
+        "context": "source",
+        "element": "260507000"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "SurgicalApproach",
+      "source": [ {
+        "context": "source",
+        "element": "424876005"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.usedCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "HasFocus",
+      "source": [ {
+        "context": "source",
+        "element": "363702006"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.reasonCode",
+        "parameter": [ {
+          "valueString": "delta"
+        }, {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "References",
+      "source": [ {
+        "context": "source",
+        "element": "references"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure.partOf->Procedure",
+        "parameter": [ {
+          "valueBoolean": true
+        } ]
+      } ]
+    }, {
+      "name": "NamesProfiles",
+      "source": [ {
+        "context": "source",
+        "element": "namesprofiles"
+      } ],
+      "target": [ {
+        "context": "target",
+        "contextType": "variable",
+        "element": "Procedure->SD MII Prozedur Procedure",
+        "parameter": [ {
+          "valueBoolean": true
+        } ]
+      } ]
+    } ]
+  } ]
+}
