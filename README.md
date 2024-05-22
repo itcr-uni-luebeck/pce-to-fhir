@@ -93,6 +93,18 @@ Value rage: << 609328004 |Allergic disposition (finding)|
 </table>
 
 
+#### References
+MII:
+* Condition.evidence.detail referenced Observation
+
+#### Names of profiles
+NASHIP:
+* KBV_PR_Base_AllergyIntolerance
+
+MII:
+* Profile - Observation - Laboruntersuchung
+* Profile - Condition - Diagnose
+
 
 ## 3. Disease due to allergies
 Value rage: <<781474001 |Allergic disorder (disorder)|
