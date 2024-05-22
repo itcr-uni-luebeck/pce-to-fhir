@@ -1,6 +1,6 @@
 # PCEtoFHIR - FHIR StructureMaps
 
-<!-- [![View Site - on GitHub Pages](https://img.shields.io/badge/View_Site-on_GitHub_Pages-blueviolet?logo=github)](https://itcr-uni-luebeck.github.io/cross-walk-analysis-icd-10-gm/) -->
+[![View Site - on GitHub Pages](https://img.shields.io/badge/View_Site-on_GitHub_Pages-blueviolet?logo=github)](https://itcr-uni-luebeck.github.io/pce-to-fhir/)
 
 ## Table of Contents
 
