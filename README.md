@@ -286,11 +286,14 @@ MII:
 ## 5. Clinical finding (general)
 Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Allergic disorder (disorder)| OR << 609328004 |Allergic disposition (finding)| OR <<419076005 |Allergic reaction (disorder)| )
 
+<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
+    <tr>
+        <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath MII</p> </th>
+    </tr>
 
-
-
-## 6. Procedure
-
+</table>
 
 
 ## 6. Procedure
