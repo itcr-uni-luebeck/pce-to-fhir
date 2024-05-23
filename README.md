@@ -292,11 +292,7 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
         <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
         <th> <p style="margin-bottom:-5px">FHIRPath MII</p> </th>
     </tr>
-    <tr>
-        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
-        <td>Condition.code</td>
-        <td>Condition.code<td>
-    </tr>   
+    <tr><td><p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td><td>Condition.code</td><td>Condition.code<td></tr>   
 </table>
 
 
