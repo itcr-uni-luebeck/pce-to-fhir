@@ -343,7 +343,7 @@ MII:
 * Profile - Observation - Laboruntersuchung
 * Profile - Condtion - Diagnosis
 
-## 6. Procedure
+<!-- ## 6. Procedure
 Value range: <<71388002 |Procedure (procedure)|
 
 
@@ -418,7 +418,7 @@ Value range: <<71388002 |Procedure (procedure)|
         <td>Procedure.reasonCode</td>
         <td>Procedure.reasonCode</td>
     </tr>
-</table>
+</table> -->
 
 
 
@@ -429,7 +429,7 @@ NASHIP:
 MII:
 *  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used) -->
 
-#### Names of profiles
+<!-- #### Names of profiles
 NASHIP:
 * KBV_PR_Base_Procedure
 
@@ -442,4 +442,4 @@ MII:
 
 [1] Kassenärztliche Bundesvereinigung. KBV-Basis-Profile. Accessed November 29, 2023. https://simplifier.net/organization/kassenrztlichebundesvereinigungkbv
 
-[2]	Medizininformatik Initiative. Der Kerndatensatz der Medizininformatik-Initiative. Accessed November 29, 2023. https://www.medizininformatik-initiative.de/de/der-kerndatensatz-der-medizininformatik-initiative
+[2]	Medizininformatik Initiative. Der Kerndatensatz der Medizininformatik-Initiative. Accessed November 29, 2023. https://www.medizininformatik-initiative.de/de/der-kerndatensatz-der-medizininformatik-initiative -->
