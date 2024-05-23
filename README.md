@@ -328,7 +328,7 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
 </table>
 
 
-#### References
+<!-- #### References
 NASHIP:
 *  Condition.evidence.detail referenced Observation 
 
@@ -341,7 +341,7 @@ NASHIP:
 
 MII:
 * Profile - Observation - Laboruntersuchung
-* Profile - Condtion - Diagnosis
+* Profile - Condtion - Diagnosis -->
 
 <!-- ## 6. Procedure
 Value range: <<71388002 |Procedure (procedure)|
