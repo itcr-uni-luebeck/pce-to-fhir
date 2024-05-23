@@ -291,6 +291,86 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
 
 ## 6. Procedure
 
+
+
+## 6. Procedure
+Value range: <<71388002 |Procedure (procedure)|
+
+
+<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
+    <tr>
+        <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
+        <th> <p style="margin-bottom:-5px">FHIRPath MII</p> </th>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
+        <td>Procedure.code</td>
+        <td>Procedure.code</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Method</font></p></td>
+        <td>Extension von HL7 International: <br> Procedure.procedure-method</td>
+        <td>Extension von HL7 International: <br> Procedure.procedure-method</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Procedure site - Direct</font></p></td>
+        <td>Procedure.bodySite</td>
+        <td>Procedure.bodySite</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Procedure site - Indirect</font></p></td>
+        <td>Procedure.bodySite</td>
+        <td>Procedure.bodySite</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Dirct substance</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Dirct morphology</font></p></td>
+        <td>Procedure.bodySite</td>
+        <td>Procedure.bodySite</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Using substance</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Using device</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Using access device</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Has intent</font></p></td>
+        <td>Procedure.category</td>
+        <td>Procedure.category</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Access</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Surgical approach</font></p></td>
+        <td>Procedure.usedCode</td>
+        <td>Procedure.usedCode</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Has Focus</font></p></td>
+        <td>Procedure.reasonCode</td>
+        <td>Procedure.reasonCode</td>
+    </tr>
+</table>
+
+
 #### References
 NASHIP:
 *  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
