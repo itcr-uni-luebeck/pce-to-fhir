@@ -285,7 +285,7 @@ MII:
 
 ## 5. Clinical finding (general)
 Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Allergic disorder (disorder)| OR << 609328004 |Allergic disposition (finding)| OR <<419076005 |Allergic reaction (disorder)| )
-
+<!-- 
 <table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
     <tr>
         <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
@@ -325,7 +325,7 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
         <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
         <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
     </tr>
-</table>
+</table> -->
 
 
 <!-- #### References
