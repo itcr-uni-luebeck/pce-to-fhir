@@ -422,12 +422,12 @@ Value range: <<71388002 |Procedure (procedure)|
 
 
 
-#### References
+<!-- #### References
 NASHIP:
 *  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
 
 MII:
-*  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
+*  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used) -->
 
 #### Names of profiles
 NASHIP:
