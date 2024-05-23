@@ -292,7 +292,39 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
         <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
         <th> <p style="margin-bottom:-5px">FHIRPath MII</p> </th>
     </tr>
-    <tr><td><p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td><td>Condition.code</td><td>Condition.code<td></tr>   
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Super concept</font></p></td>
+        <td>Condition.code</td>
+        <td>Condition.code</td>
+    </tr>
+    <tr>
+        <td rowspan="2"> <p style="margin-bottom:-5px"><font color="#FF7F0E">Finding site</font></p> </td>
+        <td rowspan="2"> <p style="margin-bottom:-5px">Condition.bodySite</p> </td>
+        <td> <p style="margin-bottom:-5px">Observation.bodySite</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px">Condition.bodySite</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Associated morphology</font></p> </td>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+        <td> <p style="margin-bottom:-5px"></p>Condition.evidence.code</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Pathological process</font></p> </td>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+        <td> <p style="margin-bottom:-5px">Condition.evidence.code</p> </td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Clinical course</font></p></td>
+        <td>Extension von HL7 International: <br>Condition.condition-diseaseCourse</td>
+        <td>Extension von HL7 International: <br>Condition.condition-diseaseCourse</td>
+    </tr>
+    <tr>
+        <td> <p style="margin-bottom:-5px"><font color="#FF7F0E">Due to</font></p></td>
+        <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
+        <td>Extension von HL7 International: <br>Condition.condition-dueTo</td>
+    </tr>
 </table>
 
 
@@ -300,7 +332,7 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
 Value range: <<71388002 |Procedure (procedure)|
 
 
-<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
+<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px" border=2 frame=box>
     <tr>
         <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
         <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
