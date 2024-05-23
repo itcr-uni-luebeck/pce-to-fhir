@@ -285,3 +285,25 @@ MII:
 
 ## 5. Clinical finding (general)
 Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Allergic disorder (disorder)| OR << 609328004 |Allergic disposition (finding)| OR <<419076005 |Allergic reaction (disorder)| )
+
+#### References
+NASHIP:
+*  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
+
+MII:
+*  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
+
+#### Names of profiles
+NASHIP:
+* KBV_PR_Base_Procedure
+
+MII:
+* SD MII Prozedur Procedure
+
+
+
+## References
+
+[1] Kassenärztliche Bundesvereinigung. KBV-Basis-Profile. Accessed November 29, 2023. https://simplifier.net/organization/kassenrztlichebundesvereinigungkbv
+
+[2]	Medizininformatik Initiative. Der Kerndatensatz der Medizininformatik-Initiative. Accessed November 29, 2023. https://www.medizininformatik-initiative.de/de/der-kerndatensatz-der-medizininformatik-initiative
