@@ -286,6 +286,11 @@ MII:
 ## 5. Clinical finding (general)
 Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Allergic disorder (disorder)| OR << 609328004 |Allergic disposition (finding)| OR <<419076005 |Allergic reaction (disorder)| )
 
+
+
+
+## 6. Procedure
+
 #### References
 NASHIP:
 *  Procedure.partOf referenced Pocedure (if more than one RoleGroup is used)
