@@ -328,11 +328,28 @@ Value range: <<404684003 | Clinical finding (finding)|  MINUS (<<781474001 |Alle
 </table>
 
 
+#### References
+NASHIP:
+*  Condition.evidence.detail referenced Observation 
+
+MII:
+* Condition.evidence.detail referenced Observation
+
+#### Names of profiles
+NASHIP:
+* KBV_PR_Base_Condition_Diagnosis
+
+MII:
+* Profile - Observation - Laboruntersuchung
+* Profile - Condtion - Diagnosis
+
+
+
 ## 6. Procedure
 Value range: <<71388002 |Procedure (procedure)|
 
 
-<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px" border=2 frame=box>
+<table style="margin-left: auto; margin-right: auto;  margin-bottom: 30px">
     <tr>
         <th> <p style="margin-bottom:-5px">SNOMED CT element</p> </th>
         <th> <p style="margin-bottom:-5px">FHIRPath NASHIP</p> </th>
