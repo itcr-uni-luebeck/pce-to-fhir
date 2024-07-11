@@ -1,0 +1,49 @@
+
+
+
+<div class="highlightingPce">
+
+  <div>
+     <span>
+      <span class="text" style="color: #3f97e0">{{this.highlightingPceService.getFocusconcept()}}</span>
+      <span *ngIf="this.highlightingPceService.isRoleGroup || this.highlightingPceService.listSummaryValueWithout.length > 0" class="text">{{" : "}}</span>
+    </span>
+    <div style="margin-bottom: 7px"></div>
+
+    <span *ngFor="let c of this.highlightingPceService.listSummaryValueWithout; let idx=index">
+    <ng-container *ngIf="this.highlightingPceService.listSummaryAttributeNamesWithout[idx].length > 0">
+      <span class="text" style="color: #68b949">{{this.highlightingPceService.listSummaryAttributeCodesWithout[idx] + " |" + this.highlightingPceService.listSummaryAttributeNamesWithout[idx] + "|"}}</span>
+      <span class="text">{{" = "}}</span>
+      <span class="text" style="color: #d74e2d">{{this.highlightingPceService.listSummaryValueWithout[idx]}}</span>
+      <span *ngIf="highlightingPceService.listSummaryAttributeNamesWithout.length - 1 > idx || highlightingPceService.isRoleGroup" class="text">{{","}}</span>
+      <br>
+    </ng-container>
+  </span>
+
+    <div *ngIf="this.highlightingPceService.listSummaryValueWithout.length > 0" style="margin-bottom: 7px"></div>
+
+    <span *ngFor="let c of this.highlightingPceService.listSummaryAttributeCodesWith; let rg=index">
+      <span class="text">{{"{"}}</span>
+      <ng-container *ngFor="let c of this.highlightingPceService.listSummaryAttributeCodesWith[rg]; let subrg=index">
+          <ng-container *ngIf="this.highlightingPceService.checkRG1Template(rg, subrg)">
+            <span class="text" style="color: #68b949">{{this.highlightingPceService.listSummaryAttributeCodesWith[rg][subrg] + " |" + this.highlightingPceService.listSummaryAttributeNamesWith[rg][subrg] + "|"}}</span>
+            <span class="text">{{" = "}}</span>
+            <span class="text" style="color: #d74e2d">{{this.highlightingPceService.listSummaryValueWith[rg][subrg]}}</span>
+            <span *ngIf="this.highlightingPceService.checkRG2Template(rg, subrg)" class="text">{{","}}</span>
+            <br *ngIf="this.highlightingPceService.checkRG2Template(rg, subrg)">
+          </ng-container>
+      </ng-container>
+      <span class="text">{{"}"}}</span>
+      <span *ngIf="this.highlightingPceService.listSummaryAttributeCodesWith.length - 1 > rg" class="text">{{","}}</span>
+      <div style="margin-bottom: 7px"></div>
+    </span>
+
+  </div>
+
+
+
+
+
+
+</div>
+

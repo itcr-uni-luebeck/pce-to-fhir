@@ -1,0 +1,1 @@
+npm install -f --legacy-peer-deps

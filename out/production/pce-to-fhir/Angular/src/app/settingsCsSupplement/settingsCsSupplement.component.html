@@ -1,0 +1,124 @@
+<!--<html lang="de" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--</head>-->
+<!--<body>-->
+
+
+<div class="settingscs">
+
+<!--  <label> Settings: </label>-->
+  <div class="row" style="width: 1000px">
+    <div class="col" style="width: 200px">
+
+      <p class="fw-bold " style="color: darkorchid"> 1. Choose a FHIR Server: </p>
+      <div class="form-check" *ngFor="let s of settingsService.listNameServer; let idx=index" style="margin-bottom: -10px">
+        <ng-container *ngIf="!s.toUpperCase().includes('CSIRO')">
+          <input class="form-check-input" type="radio" [id]="'radioCs' + idx" [value]="'option' + idx" (change)="settingsService.getServer(s,idx)">
+          <label class="form-check-label" [for]="'option' + idx">
+            {{s}}
+          </label>
+        </ng-container>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radioServerCs" id="radioOtherCs" value="option3" (change)="settingsCsService.getServer('other')">
+        <label class="form-check-label" for="radioOtherCs">
+          Other
+        </label>
+      </div>
+
+      <div class="row" *ngIf="settingsCsService.isOtherServer" style="margin-top: 10px">
+        <div class="col">
+          <input class="form-control form-control-sm" id="otherServer" style="width: 400px" placeholder="Server-URL" [(ngModel)]="settingsCsService.url_other_server">
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-sm btn-success" style="margin-left: 6px" (click)="settingsCsService.checkUrl()">ok</button>
+        </div>
+        <div>
+        <div *ngIf="settingsCsService.syntaxCheck === 'check'" class="alert alert-primary" role="alert" style="margin-top: 20px; padding: 4px; width: 400px">
+          Checking URL ...
+        </div>
+        <div *ngIf="settingsCsService.syntaxCheck === 'success'" class="alert alert-success" role="alert" style="margin-top: 20px; padding: 4px; width: 400px">
+          URL is correct!
+        </div>
+        <div *ngIf="settingsCsService.syntaxCheck === 'error'" class="alert alert-danger" role="alert" style="margin-top: 20px; padding: 4px; width: 400px">
+          URL is wrong! (Example: https://ontoserver.imi.uni-luebeck.de/fhir)
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col">
+      <div class="col">
+      <p class="fw-bold " style="color: darkorchid"> 2. Choose a CodeSystem Supplement: </p>
+      <input class="form-control form-control-sm" list="datalistOptionsXX" id="exampleDataList" style="width: 400px" placeholder="CodeSystem Supplement" [(ngModel)]="settingsCsService.nameCsSupplement" [disabled]="settingsCsService.isInputDisabled()">
+      <datalist id="datalistOptionsXX">
+        <option id="XXXC" *ngFor="let v of settingsCsService.getNames()"> {{v}}</option>
+      </datalist>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-sm btn-success" style="margin-left: 430px; margin-top: -60px" (click)="settingsCsService.loadCsSupplement()" [disabled]="settingsCsService.isSaveDisabled()"> ok </button>
+      </div>
+
+    </div>
+
+
+    <div *ngIf="oldUrlCsSupplement !== settingsCsService.newUrl"> {{getStoredPCEs(settingsCsService.newUrl)}} </div>
+    <div *ngIf="oldUrlCsSupplement !== ''" style="margin-top: 20px">
+
+    <div style="margin-top: 20px">
+      <p class="fw-bold" style="color: darkorchid"> 3. Choose a PCE: </p>
+
+<!--      <div *ngIf="validateCodeMessage !== ''" class="alert alert-danger" role="alert" style="margin-top: 20px; max-width: 1300px">-->
+<!--        {{validateCodeMessage}}-->
+<!--      </div>-->
+
+      <table id="tablepce" class="table table-striped table-bordered table-sm" style="max-width: 1300px; min-width: 1300px">
+        <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name PCE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="cursor: pointer" *ngFor="let c of listStoredPCEsName; let idx = index" (click)="clickRowStore($event, idx)" [id]="idx">
+          <th>{{idx}}</th>
+          <td>{{c}}</td>
+        </tr>
+        </tbody>
+      </table>
+<!--      [disabled]="!isBtnUpdateActive"-->
+      <button type="button" class="btn btn-sm btn-success" style="margin-top: 20px; margin-bottom: 40px" (click)="loadPCE()">Load PCE</button>
+    </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+<!--  <div class="modal fade" id="settingsCSModal" data-bs-backdrop="static" tabindex="-1"  aria-labelledby="settingsModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-body">-->
+<!--          &lt;!&ndash;              <app-settings></app-settings>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal" style="width: 60px" (click)="settingsService.cancelModal()">Close</button>-->
+<!--          <button type="button" class="btn btn-sm btn-success"data-bs-dismiss="modal" style="width: 60px" (click)="settingsService.saveModal()" [disabled]="settingsService.isSaveDisabled()">Save</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+</div>
+
+
+<!--</body>-->
+<!--</html>-->

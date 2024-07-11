@@ -1,0 +1,44 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+/src/main/java/com/snomedfhir/evaluation/
+/src/main/java/com/snomedfhir/FhirPath.java
+/src/main/java/com/snomedfhir/FhirStructureMapAllergicDisease.java
+/src/main/java/com/snomedfhir/FhirStructureMapAllergicReaction.java
+/src/main/java/com/snomedfhir/FhirStructureMapAllergy.java
+/src/main/java/com/snomedfhir/FhirStructureMapClinicalFinding.java
+/src/main/java/com/snomedfhir/FhirStructureMapProcedure.java
+/src/main/java/com/snomedfhir/FhirTest.java
+/src/main/java/com/snomedfhir/resources/snomed-version20230430.owl
+/src/main/java/com/snomedfhir/SnomedConceptModel.java

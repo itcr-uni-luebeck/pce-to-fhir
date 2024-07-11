@@ -1,0 +1,63 @@
+<div class="settings">
+  <div>
+    <div class="modal" id="settingsModal" role="dialog" tabindex="-1" [ngStyle]="{'display':appService.modalStyleDisplay('settingsModal')}">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <h5 class="fw-bold" style="margin-bottom: 30px"> Settings: </h5>
+            <p class="fw-bold "> Choose a FHIR-Server: </p>
+            <div class="form-check" *ngFor="let s of settingsService.listNameServer; let idx=index">
+              <input class="form-check-input" type="radio" name="radioServer" [id]="'radio' + idx" [value]="'option' + idx" (change)="settingsService.getServer(s,idx)">
+              <label class="form-check-label" [for]="'option' + idx">
+                {{s}}
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioServer" id="radioOther" value="option3" (change)="settingsService.getServer('other')">
+              <label class="form-check-label" for="radioOther">
+                Other
+              </label>
+            </div>
+
+            <div class="row" *ngIf="settingsService.isOtherServer" style="margin-top: 10px">
+              <div class="col">
+                <input class="form-control form-control-sm" id="otherServer" style="width: 400px" [(ngModel)]="settingsService.url_other_server">
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-sm btn-success" style="margin-left: 6px" (click)="settingsService.checkUrl()">ok</button>
+              </div>
+              <div *ngIf="settingsService.syntaxCheck === 'check'" class="alert alert-primary" role="alert" style="margin-left: 12px; margin-top: 20px; padding: 4px; width: 400px">
+                Checking URL ...
+              </div>
+              <div *ngIf="settingsService.syntaxCheck === 'success'" class="alert alert-success" role="alert" style="margin-left: 12px; margin-top: 20px; padding: 4px; width: 400px">
+                URL is correct!
+              </div>
+              <div *ngIf="settingsService.syntaxCheck === 'error'" class="alert alert-danger" role="alert" style="margin-left: 12px; margin-top: 20px; padding: 4px; width: 400px">
+                URL is wrong!
+              </div>
+
+            </div>
+
+            <div style="margin-top: 10px">
+              <div *ngIf="settingsService.listSnomedVersionsDisplay.length === 0 && (settingsService.syntaxCheck === 'check' || settingsService.syntaxCheck === '')" class="d-flex align-items-center">
+                <p class="fw-semibold">Loading ...</p>
+              </div>
+
+              <input *ngIf="!settingsService.isLoadingReady" class="form-control form-control-sm" list="datalistOptionsX" id="exampleDataList" placeholder="SNOMED CT version" style="width: 400px" [(ngModel)]="settingsService.versionChange">
+              <datalist id="datalistOptionsX">
+                <option id="XXX" *ngFor="let v of settingsService.listSnomedVersionsDisplay"> {{v}}</option>
+              </datalist>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal" style="width: 60px" (click)="settingsService.cancelModal(); appService.closePopup('settingsModal')">Close</button>
+            <button type="button" class="btn btn-sm btn-success"data-bs-dismiss="modal" style="width: 60px" (click)="settingsService.saveModal(); appService.closePopup('settingsModal')" [disabled]="settingsService.isSaveDisabled()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="pce-start">
+
+  <div style="margin-top: 50px; margin-left: 40px">
+    <p class="fs-5 fw-bold" style="margin-bottom: 20px; color: darkorchid">Start - PCE</p>
+
+    <div class="form-check" style="max-width: 200px">
+      <input class="form-check-input" type="radio" name="radioStart" id="radioEnterPce" checked (click)="loadingOption = 'enter'">
+      <label class="form-check-label" for="radioEnterPce">
+        Enter PCE
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radioStart" id="radioCSSupplement" (click)="loadingOption = 'CSSupplement'; settingsCsService.clickSettings('ID_TEMPLATE_UPDATE')">
+      <label class="form-check-label" for="radioCSSupplement">
+        PCE from CodeSystem Supplement
+      </label>
+    </div>
+
+    <div *ngIf="loadingOption === 'enter'" style="margin-top: 20px">
+      <div class="form-group">
+        <label class="fw-bold" for="enterTextarea" style="color: darkorchid; margin-bottom: 10px">Enter PCE</label>
+        <textarea class="form-control" id="enterTextarea" rows="10" style="max-width: 1400px" [(ngModel)]="pce"></textarea>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col" style="max-width: 70px; min-width: 70px">
+          <button type="button" class="btn btn-success btn-sm" style="margin-top: 10px; width: 60px" [disabled]="pce.length === 0" (click)="checkPceInput()">Ok</button>
+        </div>
+        <div class="col">
+          <div *ngIf="validatePceMessage === 'Validate PCE'" class="alert alert-primary" role="alert" style="margin-left: 30px; margin-top: 10px; padding: 3px; width: 200px">
+            Checking syntax of PCE ...
+          </div>
+          <div *ngIf="validatePceMessage === 'Syntax correct'" class="alert alert-success" role="alert" style="margin-left: 30px; margin-top: 10px; padding: 3px; width: 220px">
+            Syntax and MRCM correct!
+          </div>
+          <div *ngIf="validatePceMessage !== 'Syntax correct' && validatePceMessage !== '' && validatePceMessage !== 'Validate PCE'" class="alert alert-danger" role="alert" style=" max-width: 1300px; margin-left: 30px; margin-top: 10px; padding: 3px">
+            <div *ngFor="let e of validatePceMessage">
+              {{e}} <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="loadingOption === 'CSSupplement'" style="margin-top: 20px">
+      <app-settingscs></app-settingscs>
+    </div>
+
+  </div>
+
+
+
+
+
+</div>

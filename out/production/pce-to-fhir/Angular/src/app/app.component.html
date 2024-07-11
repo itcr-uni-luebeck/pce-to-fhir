@@ -1,0 +1,51 @@
+<html lang="de" xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+<body>
+
+<div class="container-fluid" style="width: 1600px">
+
+  <nav class="navbar navbar-expand-md bg-dark">
+    <ul class="navbar-nav text-light">
+      <div class="row">
+        <div class="col">
+          <h1 style="margin-left: 40px; color: lightskyblue"> PCE </h1>
+        </div>
+        <div class="col">
+          <h4 style="margin-left: -15px; margin-top: 15px; color: lightgrey"> to </h4>
+        </div>
+        <div class="col">
+          <h1 style="margin-left: -15px; color: orangered"> FHIR </h1>
+        </div>
+      </div>
+    </ul>
+
+    <ul class="navbar-nav navbar-collapse justify-content-end text-light">
+      <li> <div class="nav-link text-light" style="cursor: pointer; margin-right: 40px; margin-top: 15px" (click)="settingsService.clickSettings('ID_SETTINGS'); appService.openPopup('settingsModal')">Settings</div>
+    </ul>
+  </nav>
+
+  <nav class="navbar navbar-expand-md bg-dark" style="margin-top: -5px; margin-bottom: -25px; height: 15px">
+    <ul class="navbar-nav text-light">
+      <p class="font-monospace small text-light bg-dark" style="margin-left: 40px"><small><small>{{settingsService.versionHome}}</small></small></p>
+    </ul>
+  </nav>
+
+
+  <!--  SETTINGS -->
+  <app-settings></app-settings>
+
+
+  <!--  PCE Start -->
+  <pce-start *ngIf="appService.item === 'start-pce'"></pce-start>
+
+
+  <!--  SuperConcept-Delta -->
+  <superconcept-delta *ngIf="appService.item === 'superconcept-delta'"></superconcept-delta>
+<!--  <superconcept-delta></superconcept-delta>-->
+
+
+</div>
+
+</body>
+</html>

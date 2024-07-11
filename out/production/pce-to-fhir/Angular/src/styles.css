@@ -1,0 +1,99 @@
+:root {
+  --focusConcept-0: rgba(221, 243, 255, 1.0) ;--focusConcept-1: rgba(0, 168, 255, 1.0);
+  --attribute-0: rgba(224, 247, 221, 1.0) ;--attribute-1: rgba(76, 209, 55, 1);
+  --value-0: rgba(252, 230, 224, 1.0) ;--value-1: rgba(232, 65, 24, 1.0);
+  --black: black;
+  --white: white;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  text-align: left;
+  max-height: 50px;
+  min-height: 50px;
+  left: 1px;
+  top: 0;
+}
+
+.box {
+  position: relative;
+  min-height: 25px;
+  max-height: 25px;
+  min-width: 100px;
+  width: fit-content;
+  padding: 5px 20px 5px 5px;
+  font-size: 11px;
+  font-family: arial;
+}
+
+.box::after {
+  content: attr(title);
+  white-space: pre-wrap;
+}
+
+.box-focusconcept {
+  min-height: 40px;
+  min-width: 200px;
+  width: fit-content;
+  background-color: var(--focusConcept-0);
+  border: 1px solid var(--focusConcept-1);
+}
+
+.box-attribute {
+  min-height: 40px;
+  max-height: 40px;
+  top: 20px;
+  left: 40px;
+  background-color: var(--attribute-0);
+  border: 1px solid var(--attribute-1);
+  border-radius: 0.5em 0.5em 0.5em;
+}
+
+.box-value {
+  min-height: 40px;
+  max-height: 40px;
+  top: 20px;
+  left: 40px;
+  background-color: var(--value-0);
+  border: 1px solid var(--value-1);
+}
+
+.line-horizontal {
+  position: relative;
+  height: 1px;
+  min-width: 60px;
+  max-width: 60px;
+  top: 37px;
+  left: 39px;
+  border-bottom: 1px solid black;
+  color: transparent;
+}
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  top: -3px;
+  left: 52px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 9px solid var(--black);
+}
+
+.circle {
+  position: absolute;
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: none;
+}
+
+tr, td {
+  height: 25px ;
+  min-height: 25px;
+  max-height: 25px;
+  cursor: pointer
+}

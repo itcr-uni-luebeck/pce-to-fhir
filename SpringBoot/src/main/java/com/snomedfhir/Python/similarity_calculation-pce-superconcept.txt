@@ -1,0 +1,1 @@
+{"withoutRoleGroup":[],"withRoleGroup":[{"roleGroup":[{"valuecode":"472964009","attributecode":"370135005"},{"valuecode":"227512001","attributecode":"246075003"},{"valuecode":"442672001","attributecode":"116676008"}]}],"focusconcept":[{"code":"419076005"}]}@15920521000119105@BatetSanchezValls
